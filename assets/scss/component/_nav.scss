@@ -1,0 +1,109 @@
+// nav component
+.nav-fix{
+	@include vertical-center-abs;
+	position: fixed;
+	right: 0;
+	width: 190px;
+	z-index: 11;
+	list-style: none;
+	li{
+		width: 100%;
+		border-top: 1px solid #00aeef;
+		a{
+			line-height: 70px;
+			font-size: 12px;
+			display: block;
+			position: relative;
+			padding: 0;
+			text-decoration: none!important;
+			&:before{
+				@include befaft-abs(50%, 1px, -1px, 0px);
+				background-color: $light-color;
+				@include animation(.25s);
+			}
+			&[data-color="white"]{
+				color: $light-color;
+			}
+			&[data-color="color"]{
+				color: $second-text-color;
+			}
+			&.active,
+			&[active="true"],
+			&:hover{
+				color: $orange-color;
+				&:before{
+					width: 100%;
+					background-color: $orange-color;
+				}
+			}			
+		}
+	}
+}
+
+.icon-bar {
+    width: 42px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: all 0.2s;
+    margin: 6px 0px;
+    &.middle-bar{
+    	margin: 12px 0px;
+    }
+}
+ 
+.navbar-toggler {
+	padding: 0px;
+	border: none;
+	background: transparent;
+	outline: none!important;
+	margin-top: 30px;
+	position: relative;
+	z-index: 1;
+	float: right;
+	width: 42px;
+	height: 42px;
+	&:before{
+		@include befaft-abs(100%, 100%, 0px, 0px);
+		@include image_background('../images/icons/close-nav.png');
+		opacity: 0;
+		@include animation(.25s);
+	}
+}
+
+.nav-collapse{
+	.navbar-toggler{
+		.icon-bar{ opacity: 0; }
+		&:before{ opacity: 1; }
+	}
+	.logo{
+		background-image: url('../images/logo.svg')!important;
+	}
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: -6% 13%;
+}
+ 
+.navbar-toggler .middle-bar {
+	opacity: 0;
+}
+ 
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 7% 130%;
+}
+ 
+.navbar-toggler.collapsed .top-bar {
+	transform: rotate(0);
+}
+ 
+.navbar-toggler.collapsed .middle-bar {
+	opacity: 1;
+}
+ 
+.navbar-toggler.collapsed .bottom-bar {
+	transform: rotate(0);
+}
+// end of nav

@@ -1,0 +1,296 @@
+
+@media (max-width: 1120px) {
+	section#HomeNews .container .slick-next { right: -70px; }
+	section#HomeNews .container .slick-prev { left: -70px; }
+
+}
+
+@media (max-width: 990px) {
+	section#HomeNews .container .slick-next { right: 0px; }
+	section#HomeNews .container .slick-prev { left: 0px; }
+	.container{ width: 100%; padding: 0px 10px; }
+	.navbar-default .nav li a {	padding: 0px 13px; }
+	section#HomeNews .container .latest-news {
+	    max-width: 1000px;
+	    padding:  0px 70px;
+	}
+
+	section#News .archived{
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.top-padding{
+		padding-top: 100px;
+	}
+
+	.navbar-default {
+	    height: 100px;
+	}
+
+	.navbar-default .navbar-logo {
+	  background: url("../images/logo.svg") right center no-repeat;
+	  float: left;
+	  width: 180px;
+	  height: 100px;
+	  margin-top: 10px;
+	  font-size: 0px;
+	  text-indent: -9999px;
+	  letter-spacing: -9999px;
+	  /*background-size: auto 100%;*/
+	}
+
+	.navbar-default .nav li a {
+		line-height: 100px;
+		padding: 0px 10px;
+	}
+
+	section#MainHome .content .text {
+	    font-size: 35px;
+	    margin-bottom: 60px;
+	}
+
+	.btn {
+	    font-size: 13px;
+	    min-width: 160px;
+	}
+
+	section#MainHome .content .arrow img{
+		height: 49px;
+	}
+
+	section#HomeOurFocus {
+	    padding: 80px 0px;
+	    min-height: 0px;
+	}
+
+	section#HomeOurFocus .container h1 {
+	    font-size: 30px;
+	}
+
+	section#HomeOurFocus .container p {
+	    line-height: 28px;
+	    margin: 50px 0px;
+	    padding: 0px 40px;
+	}
+	section#HomeOurFocus .container p br{ display: none; }
+
+	section#HomePortfolio .container h1 {
+	    font-size: 30px;
+	}
+
+	.col-sm-2 {
+	    width: 33.33333333%;
+	    margin-bottom: 20px;
+	}
+
+	section#HomeNews .container .news-list a.title {
+	    font-size: 22px;
+	    line-height: 30px;
+	}
+
+	section#HomeNews .container .latest-news {
+	    padding:  0px 150px;
+	}
+
+	section#HomeNews .container .news-list p {
+	    margin: 30px 0px 50px;
+	    font-size: 16px;
+	}
+
+	section#HomeNews .container .slick-next { right: 10px; }
+	section#HomeNews .container .slick-prev { left: 10px; }
+
+	section#HomeContact .container{ padding: 0px 20px; }
+
+	section#HomeContact .container .content {
+	    padding-left: 250px;
+	}
+
+	section#HomeContact .container .content .info {
+	    position: absolute;
+	    width: 230px;
+	    left: 0;
+	    top: 0;
+	}
+
+	.maps{ height:146px; }
+	#gmap_canvas{ height:146px; }
+
+	section#HomeContact .container .content .info .address {
+	    line-height: 20px;
+	    font-size: 12px;
+	}
+
+	section#HomeContact .container .content form textarea {
+	    height: 171px;
+	}
+
+	.top-padding .container{ max-width: 1000px; padding: 50px 5px 100px; }
+	#About .container .logo-area img {
+	    margin: 10px;
+	}
+
+	#hero-banner .text {
+	    padding: 0px 20px;
+	}
+
+	#Portfolio .content .list, #Team .content .list{
+		height: 170px;
+	}
+
+	#Portfolio .content .list .text, #Team .content .list .text {
+	    padding: 20px;
+		height: 170px;
+	    
+	}
+
+	#Portfolio .content .list .text hr {
+	    margin: 10px 0px;
+	}
+
+	#Portfolio .content .list .text .content, #Team .content .list .text .content {
+	    font-size: 12px;
+	}
+
+	#PortfolioDetail .container{
+		max-width: 630px;
+	}
+	
+	#PortfolioDetail p {
+	    color: #808080;
+	    font-size: 14px;
+	}
+
+	#PortfolioDetail a.urllink {
+	    font-size: 14px;
+	}
+
+	#PortfolioDetail .social-area a {
+	    margin: 0px 4px;
+	}
+
+	#Team .content .list .text .job-title {
+	    font-size: 12px;
+	    font-family: "Montserrat";
+	    margin: 5px 0px 14px;
+	}
+
+	#Team .content .list > .name {
+	    display: block;
+	    font-size: 14px;
+	    color: #808080;
+	    font-family: "Montserrat";
+	    padding: 20px;
+	}
+
+	#Team .content .list .text .name {
+	    font-size: 14px;
+	    font-family: "Montserrat";
+	}	
+
+	#TeamDetail .container{
+		padding-left: 270px;
+	}
+
+	#TeamDetail .container .avatar{
+		width: 230px;
+		height: 230px;
+		border-radius: 230px;
+	}
+
+	section#Contact .container .address{
+		font-size: 12px;
+	}
+
+	section#News .list a.title{
+		font-size: 20px;
+		line-height: 28px;
+	}
+	section#NewsDetail .container{ padding: 20px 20px 50px; }
+
+	#NewsDetail .content img{
+		display: block;
+		margin: 10px 0px;
+		width: 100%!important;
+		height: auto!important;
+	}
+}
+
+@media (max-width: 712px) {
+	.top-padding{
+		padding-top: 60px;
+	}
+
+	.navbar-default {
+	    height: 60px;
+	}
+
+	.navbar-default .navbar-logo {
+	  background: url("../images/logo.svg") right top no-repeat;
+	  background-size: 100% auto;
+	  float: left;
+	  width: 150px;
+	  height: 60px;
+	}
+
+	.navbar-default .nav li a {
+		line-height: 60px;
+		padding: 0px 5px;
+		font-size: 10px;
+	}
+
+}
+
+@media (max-width: 620px) {
+	#Team .content .col-lg-4{
+		width: 50%;
+	}
+}
+
+@media (max-width: 560px) {
+	.navbar-default {
+	    height: 60px;
+	}
+
+	.navbar-default .navbar-logo {
+	  background: url("../images/logo.svg") right top no-repeat;
+	  background-size: 100% auto;
+	  float: left;
+	  width: 150px;
+	  height: 60px;
+	}
+
+	.navbar-default .nav li a {
+		line-height: 60px;
+		padding: 0px 5px;
+		font-size: 8px;
+	}
+
+	.navbar-default .navbar-logo {
+	    background: url("../images/logo.svg") center center no-repeat;
+	    background-size: 100% auto;
+	    float: left;
+	    width: 71px;
+	    height: 54px;
+	}
+
+	#About .container .logo-area img {
+	    display: block;
+	    margin: 45px auto; 
+	}
+
+	#TeamDetail .container{
+		padding-left: 240px;
+	}
+
+	#TeamDetail .container .avatar{
+		width: 200px;
+		height: 200px;
+		border-radius: 200px;
+	}
+
+
+
+}

@@ -1,0 +1,166 @@
+// header
+header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	&:before{
+		@include befaft-abs(100%, 100%, 0, 0);
+		transform: translateY(-120%);
+		@include animation(.25s);
+		background-color: #f4f4f4;
+	}
+	height: 150px;			
+	@include breakpoint($W1366){
+		height: 120px;			
+	}
+	@include breakpoint($W768){
+		height: 100px;
+	}
+	.logo{
+		z-index: 1;
+		display: block;
+		float: left;
+		position: relative;
+		@include watermark('../images/logo.svg', 174px, 36px);
+		margin-top: 70px;
+		// left: 70px;
+		transform: translate3d(0,0,0);
+		@include breakpoint($W1366){
+			margin-top: 42px;
+		}
+		@include breakpoint($W768){
+			margin-top: 36px;
+		}
+	}
+	.contact{
+		// position: fixed;
+		display: block;
+		margin-top: 67px;
+		// right: 70px;
+		float: right;
+		height: 37px;
+		line-height: 35px;
+		border: 1px solid;
+		width: 120px;
+		font-size: 12px;
+		text-decoration: none!important;
+		&:hover{
+			border-color: $orange-color!important;
+			color: $orange-color!important;
+		}
+		@include breakpoint($W1366){
+			margin-top: 40px;
+		}
+	}
+	.navbar-collapse{
+		padding: 0px;
+		z-index: 0;
+		@include breakpoint(max-width 990px){
+			position: absolute;
+			top: 0;
+			left: 0px;
+			width: 100%;
+			@include animation(.5s);
+			// background: #004f81;
+			align-items: unset;
+			&:before{
+				content: '';
+				position: absolute;
+				background-color: #fff;
+				width: 100%;
+				height: 120vh;
+				top: 0;
+				left: 0;
+				transform: translateY(-100%);
+				@include animation(.5s);
+			}
+			&.collapsing{
+				&:before{
+					transform: translateY(0%);
+				}					
+			}
+			&.show{
+				min-height: 100vh;
+				// display: block!important;
+				&:before{
+					transform: translateY(0%);
+				}
+			}
+		}
+		.navbar-nav{
+			margin-top: 0px;
+			position: relative;
+			padding-top: 120px;
+			@include breakpoint(min-width 990px){
+				height: 93px;
+			}
+			.nav-item{
+				border-top: 1px solid #dcdcdc;
+			}
+			.nav-link{
+				color: #666;
+				font-size: 20px;
+				line-height: 60px;
+				padding: 0px;
+				margin-left: 0px;
+				padding-bottom: 20px;
+				white-space: nowrap;
+				@include breakpoint(max-height 500px){
+					line-height: 40px;
+					padding-bottom: 10px;
+					font-size: 18px;
+				}
+				&.contactus{
+					line-height: 50px;
+					text-align: center;
+					padding: 0px;
+					color: $orange-color;
+					border: 1px solid $orange-color;
+					margin-top: 30px;
+				}
+			}
+
+		}
+	}
+	&[data-color="white"]{
+		.contact{
+			border-color: $light-color;
+			color: $light-color;
+			// &:hover{
+			// 	background-color: $light-color;
+			// 	color: $second-text-color;
+			// }			
+		}
+		.logo{
+			background-image: url('../images/logo-white.svg');
+		}
+
+	}
+	&[data-color="color"]{
+		.contact{
+			border-color: $second-text-color;
+			color: $second-text-color;
+			// &:hover{
+			// 	color: $light-color;
+			// 	background-color: $second-text-color;
+			// }
+		}
+	}
+	&.with-bg{
+		&:before{
+			transform: translateY(0%);
+		}
+		.logo{
+			background-image: url('../images/logo.svg')!important;
+		}
+		.icon-bar{
+			background-color: $second-text-color!important;
+		}
+		.contact{
+			border-color: $second-text-color;
+			color: $second-text-color;
+		}
+	}
+}

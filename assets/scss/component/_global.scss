@@ -1,0 +1,262 @@
+body{
+	margin:0;
+	padding:0;
+	color:$text-color;
+	@include font-regular;
+	@include font-layout(16, 6);
+	@include breakpoint($W1200){
+		font-size: 16px;
+		line-height: 26px;
+	}
+	@include breakpoint($W768){
+		font-size: 14px;
+		line-height: 24px;
+	}
+	&.noscroll{
+		overflow: hidden;
+	}
+}
+
+.section, 
+section{
+	position: relative;
+	overflow: hidden;
+	z-index: 10;
+	&.full-height{
+		@include breakpoint($MW768){
+			min-height: 100vh;
+		}
+	}
+	&.default{
+		padding-top: 178px;
+		padding-bottom: 144px;
+	}
+	&.dark{
+		background-color: #273c8d;
+	}
+}
+
+.section{
+	&.default{
+		padding: 0px;
+		.container{
+			padding-top: 170px;
+			padding-bottom: 100px;
+			@include breakpoint($W768){
+				padding-top: 150px;
+				padding-bottom: 100px;
+			}
+		}
+	}
+}
+
+#content{
+	overflow-x: hidden;
+	position: relative;
+}
+
+a{ 
+	@include animation(.25s); 
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+.table-lo{
+	display: table;
+	width: 100%;
+	height: 100%;
+	.cell{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+.container{
+	width: 100%;
+	padding: 0px 30px; 
+	position: relative;
+	max-width: 1440px;
+	@include breakpoint($MW576){ padding: 0px 40px; }
+	@include breakpoint($MW768){
+		&.default{
+			padding-left: 80px;
+			padding-right: 270px;
+		}
+		&.full-width{
+			max-width: 100%;
+			padding: 0px 70px;
+		}
+	}
+	@include breakpoint($MW1200){
+		&.default{
+			padding: 0px 200px;
+			padding-right: 305px;
+		}	
+		&.full-width{
+			max-width: 100%;
+			padding: 0px 70px;
+		}	
+	}
+	@include breakpoint($MW1366){
+		padding: 0px 200px;
+		&.default{
+			padding: 0px 300px;
+			padding-right: 315px;
+		}
+		.inner-content{
+			padding-left: 100px;
+		}
+		&.full-width{
+			max-width: 100%;
+			padding: 0px 70px;
+		}
+	}
+
+}
+
+.row{
+	margin-left: -7.5px;
+	margin-right: -7.5px;
+	[class*='col-']{
+		padding-left: 7.5px;
+		padding-right: 7.5px;
+	}
+	&.row-20{
+		margin-left: -10px;
+		margin-right: -10px;
+		[class*='col-']{
+			padding-left: 10px;
+			padding-right: 10px;
+		}		
+	}
+	&.no-padding{
+		margin-left: 0px;
+		margin-right: 0px;
+		[class*='col']{
+			padding-left: 0px;
+			padding-right: 0px;
+		}		
+	}
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $light-color;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $light-color;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $light-color;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $light-color;
+}
+
+#plus {
+  position: absolute;
+}
+
+.plus1{
+		-webkit-animation: rotation 1.25s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  width: 30px;
+  right: 30%;
+  top: 30%;
+}
+
+.plus2{
+		-webkit-animation: rotation 1.5s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  width: 20px;
+  right: 20%;
+  top: 50%;
+}
+
+.plus3{
+		-webkit-animation: rotation 1.25s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  width: 30px;
+  right: 30%;
+  bottom: 25%;
+  display: none;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		90% {
+				-webkit-transform: rotate(179deg);
+		}
+		to {
+				-webkit-transform: rotate(179deg);
+		}
+}
+
+.nicescroll-rails{
+	z-index: 111!important;
+}
+
+form{
+	textarea,
+	input{
+		display: block;
+		padding: 0px 16px;
+		background-color: unset;
+		border: 1px solid $light-color;
+		color: $light-color;
+		margin-bottom: 12px;
+		width: 100%;
+	}
+	input{
+		line-height: 44px;
+		height: 46px;
+	}
+	textarea{
+		resize: none;
+		height: 136px;
+		margin-bottom: 20px;
+		padding: 7px 16px;
+	}
+}
+
+.custom-bar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: unset;
+	border-radius: 0px;
+	background: url('../images/bg-track.png') center center repeat-y;
+}
+
+.custom-bar::-webkit-scrollbar
+{
+	width: 8px;
+	// background-color: #dfdfdf;
+}
+
+.custom-bar::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	width: 8px;
+	-webkit-box-shadow: unst;
+	background-color: #dfdfdf;
+}
+
+#preloader{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background: rgba(237, 234, 234, .7) url('../images/loader.svg') center center no-repeat;
+	background-size: 100px;
+	z-index: 11;
+	display: none;
+}
+
+.fp-section{
+	@include breakpoint(max-width 1100px){
+		height: auto!important;
+		.fp-scrollable{
+			height: auto!important;
+		}
+	}
+}

@@ -1,0 +1,390 @@
+@media (max-width: 480px) {
+	.top-padding{
+		padding-top: 80px;
+	}
+
+	.mobile{ display: table!important; }
+	.desktop{ display: none!important; }
+
+	.navbar-default {
+	    height: 80px;
+	}
+
+	.navbar-default .nav li a {
+		line-height: 80px;
+		padding: 0px 5px;
+		font-size: 8px;
+	}
+
+	.navbar-default .navbar-logo {
+	    background: url("../images/logo.svg") right center no-repeat;
+	    background-size: auto 52px;
+	    float: left;
+	    width: 216px;
+	    height: 80px;
+	    margin: 0px;
+	}
+
+	.navbar-toggle .icon-bar {
+	    display: block;
+	    width: 32px;
+	    height: 3px;
+	    border-radius: 1px;
+	    margin-bottom: 6px;
+	}
+
+	.navbar-toggle {
+	    margin-right: 15px;
+	    margin-top: 20px;
+	}
+	.navbar-collapse {
+	    overflow-x: visible;
+	    /* padding-right: 15px; */
+	    /* padding-left: 15px; */
+	    background: rgba(255,255,255,0.93);
+	    padding: 0px;
+	    border: none;
+	    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	    -webkit-overflow-scrolling: touch;
+	}
+
+	.navbar-nav {
+	    margin: 0px;
+	    width: 100%;
+	}
+	.nav > li {
+	    position: relative;
+	    display: block;
+	    border-bottom: 1px solid #e1e1e1;
+	}
+
+	.navbar-default .nav li a {
+	    line-height: 45px;
+	    padding: 0px;
+	    font-size: 14px;
+	    padding-left: 27px;	
+	}
+
+	.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+	    max-height: 465px;
+	}
+
+	.navbar-default .navbar-nav> .active> a {
+	    background: url(../images/navbar_bg_mobile.jpg) left center repeat-y!important;
+	}
+
+	section#MainHome {
+		padding-top: 80px;
+	    height: 568px;
+	    background-attachment: scroll;
+	}
+
+	section#MainHome .content .text {
+	    font-size: 30px;
+	    margin-bottom: 48px;
+	    letter-spacing: 3px;
+	    line-height: 47px;
+	    padding: 0px 10px;
+	}
+
+	section#MainHome .content .arrow {
+	    bottom: 22px;
+	    margin-left: -22px;
+	}
+
+	section#MainHome .content .arrow img {
+	    height: 38px;
+	}
+/*	section#MainHome .content .arrow {
+	    display: none;
+	}*/
+
+	section#HomeOurFocus .container p {
+	    line-height: 28px;
+	    margin: 50px 0px;
+	    padding: 0px 10px;
+	    font-size: 16px;
+	}
+
+	section#HomeOurFocus .container p br{
+	    display: block;
+	}
+
+	.col-sm-2 {
+	    width: 50%;
+	    float: left;
+	    margin-bottom: 20px;
+	}
+
+	section#HomeNews .container{ padding: 0px; }
+	section#HomeNews .container .latest-news {
+	    padding: 0px;
+	}
+
+	section#HomeNews .container .news-list{ padding: 0px 20px; }
+	section#HomeNews .container .news-list a.title {
+	    font-size: 20px;
+	    line-height: 26px;
+	}
+
+	ul.slick-dots{ text-align: center; margin-top: 50px; }
+	ul.slick-dots li{ 
+		margin: 0px 6px;
+		display: inline-block;
+		vertical-align: top;
+		zoom: 1; /* Fix for IE7 */
+		*display: inline; /* Fix for IE7 */
+	}	
+
+	ul.slick-dots li button{ 
+		width: 12px;
+		height: 12px;
+		border-radius: 20px;
+		background: #b7b7b7;
+		font-size: 0px;
+	}
+
+	ul.slick-dots li.slick-active button{ 
+		background: #e92127;
+	}
+
+	section#HomeContact{
+		background-attachment: scroll;
+	}
+	section#HomeContact .container .content {
+	    padding-left: 0px;
+	}
+
+	section#HomeContact .container .content .info {
+	    position: relative;
+	    width: 100%;
+	    text-align: center;
+	    margin-bottom: 30px;
+	}
+
+	section#HomeContact .container .content .info .address {
+	    font-size: 14px;
+	}
+
+	.maps, #gmap_canvas {
+	    height: 230px;
+	}
+
+	section#HomePortfolio .container h1 {
+	    font-size: 25px;
+	}
+
+	section#HomeOurFocus .container h1 {
+	    font-size: 25px;
+	}
+
+	#hero-banner{
+		height: 280px;
+		background-attachment: scroll!important;
+		background-size: cover!important;
+
+	}
+
+	#hero-banner .text {
+	    padding: 0px 30px;
+	    font-size: 25px;
+	    line-height: 37px;
+	    text-align: center;
+	}
+
+	#hero-banner .text br{ display: none; }
+	#hero-banner.about{
+		background: url(../images/about_banner_mobile.jpg) center center no-repeat;
+	}
+	#hero-banner.portfolio{
+		background: url(../images/portfolio_banner_mobile.jpg) center center no-repeat;
+	}
+
+	#hero-banner.team{
+		background: url(../images/team_banner_mobile.jpg) center center no-repeat;
+	}
+
+	#hero-banner.news{
+		background: url(../images/news_banner_mobile.jpg) center center no-repeat;
+	}
+
+	#hero-banner.partners{
+		background: url(../images/partners_banner_mobile.jpg) center center no-repeat;
+	}
+
+	#hero-banner.indigo{
+		background: url(../images/indigo_banner_mobile.jpg) center center no-repeat;
+	}
+
+	#Portfolio .content .col-lg-4, #Team .content .col-lg-4{
+		width: 50%;
+	}
+
+	#Portfolio .content .list {
+	    height: 156px;
+	}
+
+	.tabing{
+		display: none;
+	}
+
+	.select{
+		display: block;
+	    padding: 0;
+	    margin: 0;
+	    width: 100%;
+		color: #989898;
+		font-family: "Montserrat";	
+		font-size: 16px;
+		line-height: 40px;
+	    display: block;
+	    border-radius: 3px;
+	    overflow: hidden;
+	    background-color: #fff;
+	    background: #fff url(../images/ArrowDropdown.png) right 20px no-repeat;
+	    /*border-bottom: 2px solid #c2c2c2;*/
+	    padding: 0px 10px;
+	}
+
+	.select hr {
+	    margin-top: 5px;
+	    margin-bottom: 20px;
+	    border: 0;
+	    border-top: 1px solid #c2c2c2;
+	}
+
+	.select select {
+	    padding: 5px 8px;
+	    width: 100%;
+	    border: none;
+	    box-shadow: none;
+	    background-color: transparent;
+	    background-image: none;
+	    -webkit-appearance: none;
+	       -moz-appearance: none;
+	            appearance: none;
+	}
+
+	.select select:focus {
+	    outline: none;
+	}
+
+	#PortfolioDetail .back-link { display: none; }
+
+	.portfolio-detail .img {
+	    padding: 0px 15%;
+	}
+
+	.portfolio-detail .img img{ width: 100%; }
+	#hero-banner.portfolio-detail {
+	    height: 180px;
+	}
+
+	.top-team-detail{
+		display: block;
+		height: 187px;
+		background-color: #f0f0f0;
+	}
+
+	#TeamDetail .container{
+		margin-top: -187px;
+		padding: 0px 20px;
+		position: relative;
+	}
+
+	#TeamDetail .container .avatar{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 227px;
+		height: 227px;
+		border-radius: 227px;
+		margin: 24px auto;
+		display: block;
+
+	}
+
+	#TeamDetail .content .name{
+		text-align: center;
+	}
+	#hero-banner.contact{ display: none; }
+	#TeamDetail .content .jobtitle{
+		text-align: center;
+	}
+
+	#TeamDetail .content .social-area {
+		text-align: center;
+	}
+
+	section#Contact .container .address{
+		font-size: 16px;
+	}
+
+	section#News .list{
+		padding: 25px 0px;
+		padding-left: 177px;
+		min-height: 170px;
+	}
+
+	section#News .list .image-thumb{
+		top: 19px;
+		width: 160px;
+		height: 120px;
+	}
+
+	section#News .list .short-desc{
+		font-size: 14px;
+		display: none;
+	}
+
+	section#News .list a.title {
+	    font-size: 16px;
+	    line-height: 23px;
+	    margin: 5px 0px;
+	}
+
+	section#News .list a.readmore, section#News .list .date {
+	    font-size: 12px;
+	}
+
+	section#NewsDetail .container h1{
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.pagination{ display: none!important; }
+
+}
+
+@media (max-width: 360px) {
+	#Portfolio .content .col-lg-4{
+		width: 100%;
+	}
+	
+	section#Contact .container .address{
+		font-size: 14px;
+	}
+
+	#Team .content .col-lg-4{
+		width: 100%;
+	}
+
+	section#News .list{
+		padding: 25px 0px;
+	}
+
+	/*section#News .list a{ display: block; }*/
+	section#News .list .image-thumb{
+		position: relative;
+		display: block;
+		width: 100%;
+		/*margin-bottom: 20px;*/
+		height: 170px;
+	}
+
+	section#News .list .date{
+		padding-top: 40px;
+	}
+
+}

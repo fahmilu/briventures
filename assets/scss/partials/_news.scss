@@ -1,0 +1,226 @@
+// News
+#IndexNews{
+	background: #f4f4f4;
+	padding-bottom: 180px;
+	.container{
+		@include breakpoint($MW1200){
+			padding-right: 288px;
+		}
+		.title{
+			@include breakpoint($MW768){
+				margin-left: 20px;
+			}
+			margin-bottom: 16px;
+		}
+	}
+	.list-news{
+		min-height: 200px;
+		@include breakpoint($W576){
+			margin-top: 30px;
+		}
+		a{
+			display: block;				
+			position: relative;
+			@include animation(.25s);
+			padding: 23px 30px 23px 340px;
+			min-height: 253px;
+			@include breakpoint($W1200){
+				padding-left: 240px;
+			}
+			@include breakpoint($W768){
+				padding-right: 0px;
+				padding-left: 200px;
+			}
+			@include breakpoint($W576){
+    			padding: 30px 0px;
+    			border-bottom: 1px solid #ccc;
+			}
+			.img{
+				background-size: cover;
+				height: 207px;
+				width: 300px;
+				background-position: center center;
+				@include pos-abs(23px, 20px, 0, 0);
+				@include breakpoint($W1200){
+					height: calc(100% - 40px);
+    				width: 200px;
+				}
+				@include breakpoint($W768){
+    				width: 180px;
+    				left: 0px;
+				}
+				@include breakpoint($W576){
+				    width: 100%;
+				    top: 0;
+				    padding-bottom: 61%;
+				    height: unset;
+				    position: relative;
+				    margin-bottom: 20px;
+				}
+			}
+			.date{
+				font-size: 14px;
+				color: #4d4d4d;
+				margin-top: -4px;
+				margin-bottom: 7px;
+			}
+			h3{
+				@include font-regular;
+				@include font-layout(24,10);
+				color: #4d4d4d;
+				margin-bottom: 15px;
+				@include breakpoint($W768){
+					@include font-layout(20,10);
+				}
+			}
+			.lead-text{
+				@include font-layout(15, 5);
+				color: #666;
+				max-height: 61px;
+				overflow: hidden;
+				@include breakpoint($W768){
+					@include font-layout(14,10);
+				}
+			}
+			.read-more{
+				@include font-layout(14, 6);
+				color: $orange-color;
+				margin-top: 15px;
+			}
+			&:hover{
+				@include breakpoint($MW576){
+					background-color: #fff;
+				}
+			}
+		}
+		.loading{
+			width: 100%;
+			height: 40px;
+			background: url('../images/load-more.svg') center center no-repeat;
+			background-size: auto 40px;
+			margin: 20px 0px;
+		}
+	}
+}
+
+.archive{
+	width: 143px;
+	position: fixed;
+	top: 255px;
+	left: 100px;
+	z-index: 11;
+	@include breakpoint($W1366){
+		left: 30px;
+	}
+	@include breakpoint($W1200){
+		display: none;
+	}
+	a{
+		display: block;
+		line-height: 43px;
+		font-size: 14px;
+		letter-spacing: .1em;
+		color: #acacac;
+		border-bottom: 1px solid #acacac;
+		&:hover, &.active{
+			color: #808080;
+			border-color: #808080;
+		}
+	}
+}
+
+#NewsDetail{
+	.container{
+		max-width: 1215px;
+		.backtonews{
+			margin: 0px;
+			@include pos-abs(-120px, 0, 0, 0);
+			width: 100%;
+			background: unset;
+			font-size: 18px;
+			line-height: 50px;
+			font-weight: bold;
+			padding: 20px 30px;
+			color: #666;
+			height: 100%;
+			i{
+				display: inline-block;
+				vertical-align: middle;
+				@include watermark('../images/icons/backto-mobile.png', 50px, 49px);
+				margin-right: 20px;
+			}		
+		}
+		.main-title{
+			font-size: 18px;
+			font-weight: 700;
+			color: #666;
+			position: relative;
+			.backto{
+				@include watermark('../images/icons/backto.png', 0px, 0px);
+				@include befaft-abs(75px, 9px, 50%, -105px);
+				margin-top: -4.5px;
+				@include animation(.25s);
+				cursor: pointer;
+			}
+			&:hover{
+				.backto{
+					transform: translateX(-5px);
+				}
+			}
+		}
+		.main-image{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.date{
+			font-size: 14px;
+			color: #4d4d4d;
+			margin-top: 43px;
+			margin-bottom: 7px;
+		}
+		h3{
+			@include font-regular;
+			@include font-layout(28,10);
+			color: #4d4d4d;
+			margin-bottom: 20px;
+		    @include breakpoint($W576){
+				@include font-layout(24, 10);
+		    }	
+		}
+		.wysiwyg-content{
+			color: #666666;
+			@include font-layout(14, 6);
+			img{
+				max-width: 100%;
+				width: 100%;
+				display: block;
+				height: auto!important;
+			}
+			a{
+				color: $orange-color;
+				&:hover{
+					text-decoration: underline!important;
+				}
+			}
+			p{
+				img{
+					margin-top: 20px;
+				}
+			}
+			p + ul,
+			p + ol{
+				margin-bottom: 20px;
+			}
+			ul, ol{
+				padding-left: 20px;
+				li{
+					padding-left: 10px;
+					margin-bottom: 7px;
+					&:last-child{
+						margin-bottom: 0px;
+					}
+				}
+			}
+		}
+	}
+}

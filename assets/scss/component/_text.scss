@@ -1,0 +1,97 @@
+// text component
+.strong{
+	font-weight: bold;
+}
+
+.text-light{
+	color: $light-color;
+}
+
+.text-main-color{
+	color: $main-color;
+}
+
+.ft-roboto{
+	@include font-roboto;
+}
+
+p{
+	margin-bottom: 20px;
+}
+
+h1{
+	@include font-bold;
+	@include font-layout(65,10);
+	letter-spacing: 0;
+	margin-bottom: 25px;
+	@include breakpoint($W1200){
+		@include font-layout(60,10);
+	}
+	@include breakpoint($W768){
+		@include font-layout(50,10);
+	}
+	@include breakpoint($W576){
+		@include font-layout(40,10);
+	}
+	@include breakpoint($W360){
+		@include font-layout(30,10);
+	}
+}
+
+h2{
+	@include font-bold;
+	@include font-layout(32,9);
+	@include breakpoint($W1200){
+		@include font-layout(30,10);
+	}
+	@include breakpoint($W1024){
+		@include font-layout(25,10);
+	}
+	margin-bottom: 35px;
+	&.title{
+		padding-top: 37px;
+	}
+}
+
+h3{
+	@include font-bold;
+	@include font-layout(26,4);
+	margin-bottom: 20px;
+	@include breakpoint($W1024){ @include font-layout(22,4); }
+}
+
+h4{
+	@include font-bold;
+	@include font-layout(48,10);
+	margin-bottom: 20px;
+}
+
+h5{
+	@include font-bold;
+	@include font-layout(48,10);
+	margin-bottom: 20px;
+}
+
+.title{
+	@include font-layout(18, 18);
+	color: #666666;
+	position: relative;
+	display: inline-block;
+	padding-right: 14px;
+	@include font-bold;
+	margin-bottom: 52px;
+	&:after{
+		@include befaft-abs(85px, 1px, 50%, unset);
+		right: 0px;
+		background: #666;
+		transform: translateX(100%);
+	}
+	&.light{
+		color: $light-color;
+		&:after{
+			background: $light-color;
+		}
+	}
+}
+
+// end of text

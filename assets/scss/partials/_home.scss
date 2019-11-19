@@ -1,0 +1,381 @@
+// home style
+#HomeBanner{
+	background-image: -moz-linear-gradient( -45deg, rgb(45,50,139) 0%, rgb(1,116,154) 100%);
+	background-image: -webkit-linear-gradient( -45deg, rgb(45,50,139) 0%, rgb(1,116,154) 100%);
+	background-image: -ms-linear-gradient( -45deg, rgb(45,50,139) 0%, rgb(1,116,154) 100%);
+	z-index: 9;
+	#particles-js {
+		position: fixed;
+		z-index: 9;
+		width: 100%;
+		height: 100%;
+	}
+	.container{
+		z-index: 11;
+		@include breakpoint($W1366){
+			padding-left: 80px;
+			padding-right: 200px;
+		}
+		@include breakpoint($W768){
+			height: auto;
+			padding-right: 80px;
+		}
+		@include breakpoint($W576){
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+		.table-lo{
+			position: relative;
+			min-height: 100vh;
+			height: auto;
+			@include breakpoint($W576){
+				min-height: unset;
+			}
+			.cell{
+				padding-top: 120px;
+				padding-bottom: 80px;
+				@include breakpoint($W576){
+					padding-top: 150px;
+					padding-bottom: 100px;
+				}
+			}
+		}
+		p{
+			color: $orange-color;
+			@include font-layout(24,10);
+			max-width: 650px;
+			@include breakpoint($W768){
+				@include font-layout(20, 10);
+			}
+			@include breakpoint($W576){
+				@include font-layout(16, 10);
+			}
+		}
+		hr{
+			border-width: 2px;
+			border-color: rgb(255, 255, 255);
+			width: 55px;
+			margin: 39px 0px;
+		}
+		.scrolldown{
+			line-height: 32px;
+			padding-left: 50px;
+			font-size: 12px;
+			color: $light-color;
+			background: url('../images/icons/scroll-down.png') center left no-repeat;
+			background-size: auto 100%;
+			@include pos-abs(unset, 0px, 80px, unset);
+			text-decoration: none;
+			@include breakpoint($W768){
+				font-size: 14px;
+				bottom: 40px;
+			}
+			@include breakpoint(max-height 600px){
+				bottom: 40px;
+			}
+			&:hover{
+				transform: translateY(5px);
+			}
+		}
+		.social-area{
+			@include pos-abs(unset, unset, 80px, 0px);
+			@include breakpoint(max-height 600px){
+				bottom: 40px;
+			}
+			@include breakpoint($W768){
+				bottom: 40px;
+			}
+			// @include breakpoint($W1440){
+			// 	right: 0px;
+			// }
+		}
+	}
+}
+
+#AboutUs{
+	background: #ebe9e2;
+	.container{
+		h2{
+			@include font-regular;
+		}
+		&:before{
+			@include watermark('../images/ornament/about.png', 0px, 0px);
+			@include befaft-abs(278px, 460px, unset, 0px);
+			bottom: -193px;
+			@include breakpoint($W768){
+				left: -193px; 
+			}
+		}
+	}
+}
+
+#MeetTheTeam{
+	@include image-background('../images/bg-home-team.png');
+	// background-attachment: fixed;
+	@include breakpoint($W576){
+		@include image-background('../images/bg-home-team-mobile.png');
+	}
+	.container{
+		padding-bottom: 120px;
+		h2{
+			@include font-regular;
+		}
+	}
+	.view-all{
+		background-color: $orange-color;
+	}
+}
+
+#OurPortfolio{
+	background: #dfdfdf;
+	// padding-bottom: 40px;
+	// padding-bottom: 186px;
+	.container{
+		padding-bottom: 120px;
+		@include breakpoint($MW768){ padding-bottom: 0px; }
+		h2{
+			@include font-regular;
+		}
+		&:before{
+			@include breakpoint($MW768){
+				@include watermark('../images/ornament/porto.png', 0px, 0px);
+				@include befaft-abs(496px, 323px, unset, -219px);
+				bottom: -83px;				
+			}
+		}
+		.list-startup{
+			margin-top: 60px;
+			margin-bottom: 100px;
+			a{
+				display: block;
+				.img{
+					overflow: hidden;
+					position: relative;
+					width: 100%;
+					padding-bottom: 100%;
+					background-color: #fff;
+					margin-bottom: 19px;
+					@include animation(.25s);
+					filter: grayscale(100%);
+					@include breakpoint($W768){
+						// background-color: unset;
+						margin-bottom: 10px;
+					}
+					img{
+						width: 70%;
+						@include center-abs;
+						// @include breakpoint($W768){ width: 100%; }
+					}
+				}
+				.name{
+					text-align: center;
+					@include font-layout(18, 9);
+					color: #666666;
+					@include font-bold;
+					@include breakpoint($W768){
+						// background-color: unset;
+						margin-bottom: 20px;
+					}
+				}
+				&:hover{
+					text-decoration: none!important;
+					.img{
+						// background-color: #d2d2d2;
+						-webkit-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.2);
+    					-moz-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.2);
+    					box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.2);
+						filter: grayscale(0%);
+					}
+				}
+			}
+		}
+	}
+	.view-all{
+		background-color: #3c5185;
+	}
+}
+
+#LatestNews{
+	background: #f4f4f4;
+	.title-container{
+		padding-bottom: 0px;
+	}
+	.latest-news{
+		// padding: 0px;
+		padding-top: 0px;
+		padding-left: 100px;
+		@include breakpoint($W768){
+			padding-right: 100px;
+		}
+		@include breakpoint($W576){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		// padding-right: 315px;
+		position: relative;
+		z-index: 2;
+		.news{
+			padding: 0px 7.5px;
+			@include breakpoint($W576){ padding: 0px; }
+			.content{
+				height: 380px;
+				background: #fff;
+				padding: 18px 16px 25px;
+				.img{
+					background-size: cover;
+					height: 170px;
+					background-position: center center;
+				}
+				.date{
+					font-size: 12px;
+					color: #666666;
+					margin-top: 10px;
+				}
+				h3{
+					@include font-regular;
+					@include font-layout(20,6);
+					color: #1a1a1a;
+					max-height: 52px;
+					margin-bottom: 11px;
+				}
+				.text{
+					@include font-layout(13, 4);
+					color: #666;
+					max-height: 51px;
+					@include breakpoint($W768){
+						max-height: 34px;
+					}
+					// overflow: hidden;
+				}
+
+				.read-more{
+					@include font-layout(14, 6);
+					color: $orange-color;
+					margin-top: 15px;
+				}
+			}
+		}
+		&:before{
+			@include watermark('../images/ornament/news.png', 0px, 0px);
+			@include befaft-abs(334px, 202px, unset, 0px);
+			bottom: 35px;
+			@include breakpoint($W576){ display: none; }
+		}
+		.list-news{
+			position: relative;
+			margin-bottom: 60px;
+			margin-left: -7.5px;
+			margin-right: -7.5px;
+
+			@include breakpoint($W576){
+				max-width: 400px;
+				margin: 0px auto;
+			}
+		}
+		.btn-area{
+			a{
+				@include breakpoint($W576){
+					width: 100%;
+				}				
+			}
+		}
+		.slick-dots{
+			list-style: none;
+			text-align: center;
+			li{
+				display: inline-block;
+				margin: 20px 5px;
+				button{
+					padding: 0px;
+					margin: 0px;
+					border: 0px;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					font-size: 0px;
+					background-color: #cccccc;
+
+				}
+				&.slick-active{
+					button{
+						background-color: $orange-color;
+					}
+				}
+			}
+		}
+		.slick-arrow{
+			@include vertical-center-abs;
+			font-size: 0px;
+			border: none;
+			background-color: unset;
+			width: 32px;
+			height: 32px;
+			outline: none;
+			@include animation(.25s);
+			&.slick-prev{
+				@include image-background('../images/icons/prev.png');
+				left: -50px;
+				&:hover{
+					left: -55px;
+				}
+			}
+			&.slick-next{
+				@include image-background('../images/icons/next.png');
+				right: -50px;
+				&:hover{
+					right: -55px;
+				}
+			}
+			&.slick-disabled{
+				pointer-events: none;
+				opacity: .5;
+			}
+		}
+	}
+}
+
+#ContactUs{
+	background: #3c5185;
+	.container{
+		padding-bottom: 120px;
+		p{
+			line-height: 26px;
+		}
+		.maps {
+		    overflow: hidden;
+		    height: 260px;
+		    width: 100%;
+		    @include breakpoint($W576){
+		    	height: 220px; 
+		    }
+		}
+		.cell{
+			vertical-align: bottom;
+		}
+		@include breakpoint($MW768){
+			&:before{
+				@include watermark('../images/ornament/about.png', 0px, 0px);
+				@include befaft-abs(485px, 316px, unset, 0px);
+				bottom: 30px;
+			}			
+		}
+		form{
+			margin-top: 40px;
+			.btn-area{
+				button{
+					@include breakpoint($W576){
+						width: 100%;
+					}				
+				}
+			}
+		}
+	}
+	footer{
+		@include pos-abs(unset, 0, 0, 0);
+		.container{
+			&:before{ display: none; }
+			padding-bottom: 0px;
+			padding-top: 0px;
+		}
+	}
+}

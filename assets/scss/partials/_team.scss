@@ -1,0 +1,270 @@
+// portofolio
+#IndexTeam{
+	background: #f4f4f4;
+	padding-bottom: 88px;
+	.list-employee{
+		@include breakpoint($W400){
+			.col-6{
+				flex: 0 0 100%;
+    			max-width: 100%;				
+			}
+		}
+		a{
+			display: block;				
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+			@include animation(.25s);
+			margin-bottom: 34px;
+			.img{
+				padding-bottom: 123.954372624%;
+				width: 100%;
+				position: relative;
+				@include image-background('');
+				@include breakpoint($W768){
+					padding-bottom: 100%;
+					background-position: center top;
+				}
+				.img-caption{
+	  				background-color: rgba(248, 152, 29, .9);
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					opacity: 0;
+					padding: 40px 28px 100px;
+					@include animation(.25s);
+					.text{
+						@include font-layout(16, 9);
+						overflow: hidden;
+						height: 100%;
+					}
+					.icon{
+						width: 100%;
+						height: 28px;
+						margin-top: 20px;
+						background: url('../images/icons/seedetail.png') left center no-repeat;
+						background-size: auto 100%;
+					}
+				}
+			}
+			.name{
+				@include font-layout(22, 9);
+				color: $orange-color;
+				letter-spacing: 0;
+				margin-top: 14px;
+    			margin-bottom: 3px;
+    			@include breakpoint($W576){
+					@include font-layout(20, 5);
+    			}	
+			}
+			.role{
+				letter-spacing: 0;
+				@include font-layout(16, 9);
+				color: #666;
+    			@include breakpoint($W576){
+					@include font-layout(14, 5);
+    			}	
+			}		
+			&:hover{
+				@include breakpoint($MW768){
+					.img-caption{ opacity: 1; }
+				}
+			}
+		}
+	}
+}
+
+.team-detail{
+	.close-modal{
+		@include watermark('../images/icons/close-modal.png', 63px, 63px);
+		@include pos-abs(0, unset, 0, 34.722222222%);
+		margin-top: -31.5px;
+		margin-right: -31.5px;
+		display: block;
+		z-index: 1;
+		@include breakpoint($MW576){
+			font-size: 0px;
+		}
+		@include breakpoint($W576){
+			margin: 0px;
+			@include pos-abs(0, 0, 0, 0);
+			width: 100%;
+			background: unset;
+			font-size: 18px;
+			line-height: 50px;
+			font-weight: bold;
+			padding: 20px 30px;
+			color: #666;
+			i{
+				display: inline-block;
+				vertical-align: middle;
+				@include watermark('../images/icons/backto-mobile.png', 50px, 49px);
+				margin-right: 20px;
+			}
+		}
+		&:hover{
+			@include breakpoint($MW768){
+				transform: rotate(180deg);
+			}
+		}
+	}
+	@include breakpoint($W576){
+		.modal-content{
+			padding-top: 90px;
+			padding-bottom: 0px;
+			.row{
+				overflow: scroll;
+			}
+		}
+	}
+	[class*='col']{
+		&.h-100{
+			@include breakpoint($W576){
+				height: auto!important;
+			}
+		}
+		@include breakpoint($W576){
+			width: 100%!important;
+		}
+		&.logo-area{
+			width: 34.722222222%;
+			@include image-background('');
+			overflow: hidden;
+			&:before{
+				@include watermark('../images/ornament/team.png', 0px, 0px);
+				@include befaft-abs(480px, 240px, unset, unset);
+			    @include horizontal-center-abs;
+			    bottom: 0px;
+			}
+			@include breakpoint($W576){
+				padding-bottom: 100%;
+				background-position: center top;
+				&:before{
+					bottom: -138px;
+				}
+			}
+		}
+		&.detail-content{
+			.content{
+				width: 100%;
+				max-width: 977px;
+    			padding: 0px 47px 0px 300px;
+				height: 100%;
+				// overflow: hidden;
+				position: relative;
+				@include breakpoint($W1024){
+					padding-left: 150px;
+				}
+				@include breakpoint($W768){
+					padding-left: 50px;
+				}
+				@include breakpoint($W576){
+					padding: 30px;
+				}
+				.top-content{
+					padding-top: 34px;
+					height: auto;
+					padding-bottom: 20px;
+					@include breakpoint($MW576){
+						padding-right: 60px;
+						position: relative;
+						// @include pos-abs(0,50px,0,0);
+					}
+					// @include breakpoint($MW768){
+					// 	@include pos-abs(0,150px,0,0);
+					// }
+					// @include breakpoint($MW1024){
+					// 	@include pos-abs(0,300px,0,0);
+					// }
+					// @include breakpoint($W576){
+					// 	margin-bottom: 20px;
+					// }
+					.backto{
+						@include watermark('../images/icons/backto.png', 0px, 0px);
+						@include befaft-abs(75px, 9px, 42px, -105px);
+						@include animation(.25s);
+						cursor: pointer;
+						&:hover{
+							transform: translateX(-5px);
+						}
+					}
+					.main-title{
+						font-size: 18px;
+						font-weight: 700;
+						color: #666;
+					}
+					.name{
+						color: $orange-color;	
+						letter-spacing: 0;
+						font-size: 48px;
+						line-height: 58px;
+						margin-top: 18px;
+						margin-bottom: 5px;
+		    			@include breakpoint($W1366){
+							@include font-layout(38, 10);
+		    			}
+		    			@include breakpoint($W576){
+							@include font-layout(35, 10);
+		    			}	
+					}
+					.category{
+						color: $orange-color;
+						font-size: 20px;
+						line-height: 30px;
+						letter-spacing: 0;
+						color: #666666;
+					}
+				}
+				.bottom-content{
+					@include breakpoint($MW576){
+						// @include pos-abs(unset,50px,0,0);
+						padding-top: 20px;
+						padding-bottom: 40px;
+
+					}
+					@include breakpoint($MW768){
+						// @include pos-abs(unset,150px,0,0);
+						padding-bottom: 40px;
+
+					}
+					@include breakpoint($MW1024){
+						// @include pos-abs(unset,300px,0,0);
+						padding-bottom: 40px;
+					}
+					.url{
+						color: $text-color;
+						font-size: 14px;
+						display: inline-block;
+						margin-bottom: 30px;
+						&:hover{
+							color: $orange-color;
+							text-decoration: underline!important;
+						}
+					}
+					.social-area{
+						a{
+							color: #666;
+							margin-left: 0px;
+							margin-right: 38px;
+						}
+					}
+				}
+				.text-area{
+					position: relative;
+					overflow: auto;
+					height: auto;
+					padding-right: 60px;
+					@include font-layout(14, 8);
+					color: #666;
+					@include breakpoint($W576){
+						height: auto;
+						padding: 0px;
+					}
+				}
+			}
+		}
+
+	}
+}

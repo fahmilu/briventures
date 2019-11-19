@@ -1,0 +1,69 @@
+// button component
+.btn-area{
+	button,
+	a{
+		line-height: 48px;
+		height: 50px;
+		min-width: 198px;
+		padding: 0px 20px;
+		font-size: 16px;
+		background-color: unset;
+		@include font-bold;
+		// margin: 0px 7.50px;
+		text-align: center;
+		border: 1px solid $orange-color;
+		// background-color: $main-color;
+		display: inline-block;
+		vertical-align: middle;
+		@include animation(.25s);
+		cursor: pointer;
+		// margin-right: 20px;
+		// border: 1px solid $main-color;
+		color: $orange-color;
+		&:hover{
+			color: $main-color;
+			border-color: $main-color;
+		}
+		&.solid{
+			background: $orange-color;
+			color: #fff;
+			&:hover{
+				color: $orange-color;
+				background-color: unset;
+				border-color: $orange-color;
+			}
+		}		
+		&.green{
+			background: #8ba332;
+		}
+
+	}
+}
+
+.view-all{
+	width: 100%;
+	position: absolute;
+	padding: 19px 0px;
+	bottom: 0px;
+	text-align: center;
+	.text{
+		line-height: 32px;
+		padding-left: 50px;
+		@include font-bold;
+		color: $light-color;
+		position: relative;
+		text-decoration: none;
+		display: inline-block;
+		&:before{
+			@include watermark('../images/icons/view-more.png', 0px, 0px);
+			@include befaft-abs(32px, 32px, 0px, 0px);
+			@include animation(.25s);
+		}
+	}
+	&:hover{
+		.text:before{
+			transform: rotate(90deg);
+		}
+	}
+}
+// end of button

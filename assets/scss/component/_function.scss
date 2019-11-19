@@ -1,0 +1,186 @@
+@mixin font-smoothing(){
+	-webkit-font-smoothing: antialiased;         
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+}
+
+@mixin font-regular() {
+	font-family: $main-font;
+	@include font-smoothing; 
+	letter-spacing: .025em;
+	font-weight: 400;
+}
+
+@mixin font-medium() {
+	font-family: $main-font;
+	@include font-smoothing;
+	letter-spacing: .025em;
+	font-weight: 600;
+}
+
+@mixin font-bold() {
+	font-family: $main-font;
+	@include font-smoothing;
+	letter-spacing: .025em;
+	font-weight: 700;
+}
+
+@mixin font-roboto() {
+	font-family: $font-roboto;
+	@include font-smoothing;
+	font-weight: normal;
+}
+
+@mixin font-layout($ft-size, $gap){
+	font-size: ($ft-size)+px;
+	line-height: ($ft-size+$gap)+px;
+}
+
+@mixin animation($sec) {
+	-webkit-transition: $animation $sec;
+	   -moz-transition: $animation $sec;
+	    -ms-transition: $animation $sec;
+	     -o-transition: $animation $sec;
+	        transition: $animation $sec;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin border($color, $height){
+	border: $height solid $color;
+}
+
+@mixin vertical-center-abs(){
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+@mixin horizontal-center-abs(){
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+
+@mixin center-abs(){
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	   -moz-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	     -o-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+
+@mixin transform($x, $y){
+	-webkit-transform: translate($x, $y);
+	   -moz-transform: translate($x, $y);
+	    -ms-transform: translate($x, $y);
+	     -o-transform: translate($x, $y);
+	        transform: translate($x, $y);	
+}
+
+@mixin pos-abs($top, $left, $bottom, $right){
+	position: absolute;
+	left: $left;
+	top: $top;
+	bottom: $bottom;
+	right: $right;
+}
+
+@mixin image-background($image-url){
+	background-image: url($image-url);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin text-background($image-url){
+	background-image: url($image-url);
+	background-position: right top 50vh;
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+@mixin watermark($img, $width, $height){
+	width: $width;
+	height: $height;
+	@include image-background($img);
+}
+
+@mixin create-circle($px){
+	width: $px;
+	height: $px;
+	border-radius: 50%;
+}
+
+@mixin center-block($width){
+	max-width: $width;
+	margin: 0px auto;
+}
+
+@mixin abs-bg(){
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+@mixin befaft-abs($width, $height, $top, $left){
+	content: '';
+	position: absolute;
+	width: $width;
+	height: $height;
+	top: $top;
+	left: $left;
+}
+
+@mixin margin($mr-top, $mr-right, $mr-bottom, $mr-left){
+	@if $mr-top != 0 {
+		margin-top: $mr-top + px;
+	}
+	@if $mr-right != 0 {
+		margin-right: $mr-right + px;
+	}
+	@if $mr-bottom != 0 {
+		margin-bottom: $mr-bottom + px;
+	}
+	@if $mr-left != 0 {
+		margin-left: $mr-left + px;
+	}
+}
+
+@mixin padding($pd-top, $pd-right, $pd-bottom, $pd-left){
+	@if $pd-top != 0 {
+		padding-top: $pd-top + px;
+	}
+	@if $pd-right != 0 {
+		padding-right: $pd-right + px;
+	}
+	@if $pd-bottom != 0 {
+		padding-bottom: $pd-bottom + px;
+	}
+	@if $pd-left != 0 {
+		padding-left: $pd-left + px;
+	}
+}
+
+@function get-vw($width, $target) { 
+	$vw-context: ($width * 0.01) * 1px;   
+	@return ($target / $vw-context) * 1vw; 
+}
